@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=alunoDAO
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ alunoDAO\ aqui.\r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment1.params=
+comment1.target=alunoDAO\ getInstance()
+comment2.params=
+comment2.target=alunoDAO()
+comment2.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ alunoDAO\r\n
+comment3.params=objalu
+comment3.target=void\ cadastrarAluno(Aluno)
+comment3.text=\r\n\ M\u00E9todo\ que\ grava\ um\ objeto\ Aluno\ no\ ArrayList\r\n\ @param\ \ obj\ objeto\ Aluno\ \ \ \ \r\n
+comment4.params=
+comment4.target=java.util.List\ listarAluno()
+comment4.text=\r\n\ M\u00E9todo\ que\ retorna\ a\ lista\ com\ os\ Alunos\ \r\n\ @param\ \ obj\ objeto\ Aluno\ \ \ \r\n\ @return\ List<Aluno>\ \r\n
+numComments=5

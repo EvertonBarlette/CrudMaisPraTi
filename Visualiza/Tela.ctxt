@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tela
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Tela\ aqui.\r\n\ \r\n\ @author\ (Everton\ jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment1.params=
+comment1.target=void\ mostrarInterface()
+comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Tela\r\n
+comment2.params=
+comment2.target=void\ limpaTela()
+numComments=3

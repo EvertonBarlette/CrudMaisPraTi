@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Pessoa
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ pessoa\ aqui.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment1.params=
+comment1.target=Pessoa()
+comment1.text=\r\n\ contrutor\ de\ inicializa\u00E7\u00F5a\ b\u00E1sica\r\n
+comment10.params=
+comment10.target=java.util.Date\ getCadastro()
+comment2.params=nome\ tel\ Data_nasc\ cadastro
+comment2.target=Pessoa(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date)
+comment2.text=\r\n\ construtor\r\n\ @param\ (String,String,Date,Date)\r\n
+comment3.params=nome
+comment3.target=void\ setNome(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment5.params=tel
+comment5.target=void\ setTel(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getTel()
+comment7.params=Data_nasc
+comment7.target=void\ setData_nasc(java.util.Date)
+comment8.params=
+comment8.target=java.util.Date\ getData_nasc()
+comment9.params=cadastro
+comment9.target=void\ setCadastro(java.util.Date)
+numComments=11

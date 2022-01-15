@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=InterfaceUsuario
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ InterfaceUsuario\ aqui.\r\n\ \r\n\ @author\ (Everton\ Jauer\ barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ M\u00E9todo\ que\ apresenta\ os\ dados\ na\ tela\ para\ a\ intera\u00E7\u00E3o\ do\ usu\u00E1rio\r\n
+numComments=2

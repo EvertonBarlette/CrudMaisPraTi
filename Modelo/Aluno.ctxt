@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Aluno
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Aluno\ aqui.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (08/01/2022)\r\n
+comment1.params=nome\ tel\ Data_nasc\ cadastro\ nota
+comment1.target=Aluno(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date,\ java.lang.Double)
+comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Alunos\r\n
+comment2.params=nota
+comment2.target=void\ setNota(double)
+comment3.params=
+comment3.target=java.lang.Double\ getNota()
+numComments=4

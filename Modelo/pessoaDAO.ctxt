@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=pessoaDAO
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ pessoaDAO\ aqui.\r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment1.params=
+comment1.target=pessoaDAO\ getInstance()
+comment2.params=
+comment2.target=pessoaDAO()
+comment2.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ pessoaDAO\r\n
+comment3.params=objpes
+comment3.target=void\ cadastrarPessoa(Pessoa)
+comment3.text=\r\n\ M\u00E9todo\ que\ grava\ um\ objeto\ pessoa\ no\ ArrayList\r\n\ @param\ \ obj\ objeto\ Pessoa\ \ \ \ \r\n
+comment4.params=
+comment4.target=java.util.List\ listarPessoa()
+comment4.text=\r\n\ M\u00E9todo\ que\ retorna\ a\ lista\ com\ as\ pessoas\ \r\n\ @param\ \ obj\ objeto\ Pessoa\ \ \ \r\n\ @return\ List<Pessoa>\ \r\n
+numComments=5
