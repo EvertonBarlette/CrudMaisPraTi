@@ -36,7 +36,7 @@ public class alunoControle
      */
     public void mostraAluno()
     {
-        int ia=0;   
+        int ia=1;   
         List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();
         for(Aluno aluno : lstalu) 
         { 
@@ -53,7 +53,7 @@ public class alunoControle
         }
         if(lstalu.isEmpty())
         {
-            System.out.println("A lista de alunos está vazia ");
+            System.out.println("=================A lista de alunos está vazia============");
         }
     }
 

@@ -37,7 +37,7 @@ public class pessoaControle
      */
     public void mostraPessoa()
     {
-        int ip=0;
+        int ip=1;
 
         List<Pessoa> lstpes = pessoaDAO.getInstance().listarPessoa();
         for(Pessoa pessoa : lstpes) 
@@ -52,7 +52,7 @@ public class pessoaControle
         }
         if(lstpes.isEmpty())
         {
-            System.out.println("A lista de pessoas está vazia ");
+            System.out.println("=================A lista de pessoas está vazia===========");
         }
     }
 
