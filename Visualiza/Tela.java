@@ -23,8 +23,6 @@ public class Tela
         String nom="";
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         DateFormat df2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        //df.setLenient(false);
-        //df2.setLenient(false);
         Date hoje = new Date();
         pessoaControle pctl = new pessoaControle();
         alunoControle actl = new alunoControle();
