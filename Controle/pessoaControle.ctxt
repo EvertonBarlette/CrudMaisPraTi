@@ -15,4 +15,6 @@ comment5.params=nome
 comment5.target=boolean\ validaNome(java.lang.String)
 comment6.params=telefone
 comment6.target=boolean\ validaTelefone(java.lang.String)
-numComments=7
+comment7.params=data
+comment7.target=boolean\ validaData(java.lang.String)
+numComments=8

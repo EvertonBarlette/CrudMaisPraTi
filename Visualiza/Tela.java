@@ -23,8 +23,8 @@ public class Tela
         String nom="";
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         DateFormat df2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        df.setLenient(false);
-        df2.setLenient(false);
+        //df.setLenient(false);
+        //df2.setLenient(false);
         Date hoje = new Date();
         pessoaControle pctl = new pessoaControle();
         alunoControle actl = new alunoControle();
@@ -45,6 +45,11 @@ public class Tela
                 limpaTela();
             }
             catch(NumberFormatException e)
+            {
+                System.out.println("Opção inválida, digite somente números de 1 a 5");
+                mostrarInterface();
+            }
+            catch(InputMismatchException e)
             {
                 System.out.println("Opção inválida, digite somente números de 1 a 5");
                 mostrarInterface();
@@ -75,6 +80,13 @@ public class Tela
                     System.out.print("Informe a data de nascimento(dd/MM/aaaa): ");
                     String Ddnt = sc.nextLine();
                     Date Ddn = df.parse(Ddnt);
+                     while(!pctl.validaData(Ddnt))
+                    {
+                        System.out.println("Data inválida : dia , mês ou ano fora das restrições.");
+                        System.out.print("Informe uma nova data de nascimento(dd/MM/aaaa): ");
+                        Ddnt = sc.nextLine();
+                        Ddn = df.parse(Ddnt);
+                    } 
                     while(Ddn.after(hoje))
                     {
                         System.out.println("Data inválida : data superior ao dia de hoje");
@@ -86,6 +98,13 @@ public class Tela
                     System.out.print("Informe a data do cadastro (dd/MM/aaaa): ");
                     String dcpt = sc.nextLine();
                     Date dcp = df.parse(dcpt);
+                      while(!pctl.validaData(dcpt))
+                    {
+                        System.out.println("Data inválida : dia , mês ou ano fora das restrições.");
+                        System.out.print("Informe uma nova data de nascimento(dd/MM/aaaa): ");
+                        dcpt = sc.nextLine();
+                        dcp = df.parse(dcpt);
+                    } 
                     while(dcp.after(hoje))
                     {
                         System.out.println("Data inválida : data superior ao dia de hoje");
@@ -121,10 +140,11 @@ public class Tela
 
             else if(opt == 3)
             {
+               
                 try
                 {
                     System.out.println("Para editar pessoa digite 1,para editar aluno digite 2");
-                    opt = Integer.parseInt(sc.nextLine());
+                    opt = Integer.parseInt(sc.nextLine()); 
                 }
                 catch(NumberFormatException e)
                 {
@@ -134,20 +154,23 @@ public class Tela
                 }
                 if(opt==1)
                 {
+                    sc.nextInt();
                     pctl.editaPessoa();
                 }
                 else if(opt==2)
                 {
                     actl.editaAluno();
                 }
-                else if(opt != 1)
+                else if(opt == 5)
                 {
-                    System.out.println("Número da opção inválido.");
+                    opt = 0;
+                     System.out.println("Digite apenas os números 1 ou 2");
                 }
-                else if(opt != 2 )
+                else
                 {
-                    System.out.println("Número da opção inválido.");
+                   System.out.println("Digite apenas os números 1 ou 2");
                 }
+                
             }
             else if(opt == 4)
             {  
@@ -170,20 +193,16 @@ public class Tela
                 {
                     actl.deletaAluno(); 
                 }
-                else if(opt != 1)
+                else if(opt == 5)
                 {
-                    System.out.println("Número da opção inválido.");
+                    opt = 0;
+                    System.out.println("Digite apenas os números 1 ou 2");
                 }
-                else if(opt != 2 )
+                else
                 {
-                    System.out.println("Número da opção inválido.");
+                   System.out.println("Digite apenas os números 1 ou 2");
                 }
             }
-            else if(opt != 5)
-            {
-                System.out.println("Número da opção inválido.");
-            }
-
         }
         //encerramento da aplicação
         System.out.print("Aplicação encerrada");

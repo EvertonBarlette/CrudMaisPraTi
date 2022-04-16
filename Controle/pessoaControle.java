@@ -58,6 +58,9 @@ public class pessoaControle
 
     public void deletaPessoa()
     {
+        boolean pos = true;
+        while(pos)
+        {
         int i=0;   
         List<Pessoa> lstpes = pessoaDAO.getInstance().listarPessoa();    
         for(Pessoa pessoa : lstpes)
@@ -76,18 +79,27 @@ public class pessoaControle
                 System.out.printf("\nInforme a posição a ser excluída:\n");
                 i = lerpes.nextInt();
                 // [ D ] remove o i-ésima pessoa da lista
-                lstpes.remove(i);   
+                lstpes.remove(i);
+                pos = false;
             }
-            catch(NumberFormatException e)
+            catch(IndexOutOfBoundsException e)
             {
-                System.out.println("Digite somente números válidos");
+                System.out.println("Insira um número de posição Existente");
             }
-
+            catch(InputMismatchException e)
+            {
+                lerpes.nextLine();
+                System.out.println("caracter invalido.Insira um número de posição Existente");
+            }
         }
-    }
+        }
+        }
 
     public void editaPessoa()
     {
+        boolean pos = true;
+        while(pos)
+        {
         int ie=0;
         selpes=0;
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -109,22 +121,20 @@ public class pessoaControle
                 System.out.printf("\nInforme a posição a ser editada:\n");
                 ie = lerpes.nextInt();
                 System.out.println("Posição"+ie+"-"+lstpes.get(ie).getNome());
+                pos = false;
             }
             catch(IndexOutOfBoundsException e)
             {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
+                System.out.println("Insira um número de posição Existente");
+                selpes = 5;
             }
             catch(InputMismatchException e)
             {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
+                lerpes.nextLine();
+                System.out.println("caracter invalido.Insira um número de posição Existente");
+                selpes = 5;
             }
-            catch(NumberFormatException e)
-            {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
-            }
+        
             while(selpes != 5)
             { 
                     System.out.println("Selecione o número do campo que deseja editar:");
@@ -171,6 +181,7 @@ public class pessoaControle
                 }
             }
         }
+        }
     }
 
     public boolean validaNome(String nome) 
@@ -182,6 +193,9 @@ public class pessoaControle
     {
         return telefone.matches("^[(][1-9]{2}[)][0-9]{5}[-][0-9]{4}|[(][1-9]{2}[)][0-9]{4}[-][0-9]{4}$"); 
     }
-
+    public boolean validaData(String data)
+    {
+        return data.matches("^(0[1-9]|[12][0-9]|[3][01])/(0[1-9]|1[012])/\\d{4}$");
+    }
 }
 

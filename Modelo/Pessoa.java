@@ -2,7 +2,7 @@ package Modelo;
 import java.util.*;
 
 /**
- * Escreva uma descrição da classe pessoa aqui.
+ * Criação da classe Pessoa e seus atributos (nome,tel,Data_nasc,cadastro).
  * 
  * @author (Everton Jauer Barlette) 
  * @version (05/01/2022)
@@ -14,7 +14,8 @@ public  class Pessoa
     private Date Data_nasc;
     private Date cadastro;
     /**
-     * contrutor de inicializaçõa básica
+     * Contrutor de inicialização básica sem parâmetros mas com o mesmo nome do construtor 
+     * abaixo (polimorfismo).
      */
     public Pessoa( )
     {
@@ -25,7 +26,7 @@ public  class Pessoa
     }
 
     /**
-     * construtor
+     * Construtor com a passagem de parâmetros
      * @param (String,String,Date,Date)
      */
 
@@ -37,6 +38,11 @@ public  class Pessoa
         this.cadastro=cadastro;
     }
 
+    /**
+     * Métodos getters and setters (get pega parâmetro, atribui para o atributo e retorna o
+     * valor. set pega  o parâmetro atribui para o atributo sem retorno de valor(somente
+     * ajusta o valor)).
+     */
     public void setNome(String nome)
     {
         this.nome = nome;

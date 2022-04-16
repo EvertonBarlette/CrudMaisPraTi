@@ -59,70 +59,80 @@ public class alunoControle
 
     public void deletaAluno()
     {
-        int i=0;   
-        List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();    
-        for(Aluno aluno : lstalu)
+        boolean pos = true;
+        while(pos)
         {
+         int i=0;   
+         List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();    
+         for(Aluno aluno : lstalu)
+         {
             System.out.println("Posição"+i+"-"+aluno.getNome());
             i++;
-        }
-        if(lstalu.isEmpty())
-        {
+         }
+         if(lstalu.isEmpty())
+         {
             System.out.println("A lista de alunos está vazia ");
-        }
-        else
-        {
+         }
+         else
+         {
               try
             {
                 System.out.printf("\nInforme a posição a ser excluída:\n");
                 i = leralu.nextInt();
                 // [ D ] remove o i-ésimo aluno da lista
-                lstalu.remove(i);   
+                lstalu.remove(i);
+                pos = false;
             }
-            catch(NumberFormatException e)
+             catch(IndexOutOfBoundsException e)
             {
-                System.out.println("Digite somente números válidos");
+                System.out.println("Insira um número de posição Existente");
             }
+            catch(InputMismatchException e)
+            {
+                leralu.nextLine();
+                System.out.println("caracter invalido.Insira um número de posição Existente");
+            }
+         }
         }
     }
 
     public void editaAluno()
     {
-        int ie=0;
-        selalu=0;
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();
-        for(Aluno aluno : lstalu)
+        boolean pos = true;
+        while(pos)
         {
+         int ie=0;
+         selalu=0;
+         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+         List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();
+         for(Aluno aluno : lstalu)
+         {
             System.out.println("Posição"+ie+"-"+aluno.getNome());
             ie++;
-        }
-        if(lstalu.isEmpty())
-        {
+         }
+         if(lstalu.isEmpty())
+         {
             System.out.println("A lista de alunos está vazia ");
-        }
-        else
-        {
+         }
+         else
+         {
              try
             {
                 System.out.printf("\nInforme a posição a ser editada:\n");
                 ie = leralu.nextInt();
                 System.out.println("Posição"+ie+"-"+lstalu.get(ie).getNome());
+                pos = false;
             }
-            catch(IndexOutOfBoundsException e)
+             catch(IndexOutOfBoundsException e)
             {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
+                System.out.println("Insira um número de posição Existente");
+                selalu = 5;
             }
             catch(InputMismatchException e)
             {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
-            }
-            catch(NumberFormatException e)
-            {
-                System.out.println("Digite apenas números válidos");
-                Tela.mostrarInterface();
+                leralu.nextLine();
+                System.out.println("caracter invalido.Insira um número de posição Existente");
+                selalu = 5;
             }
             while(selalu != 6)
             {
@@ -176,6 +186,7 @@ public class alunoControle
                 }
 
             }
+         }
         }
     }
 }

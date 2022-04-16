@@ -1,11 +1,12 @@
 #BlueJ class context
 comment0.target=Aluno
-comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Aluno\ aqui.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (08/01/2022)\r\n
+comment0.text=\r\n\ Classe\ Aluno\ recebe\ por\ heran\u00E7a\ os\ atributos\ da\ classe\ pessoa.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (08/01/2022)\r\n
 comment1.params=nome\ tel\ Data_nasc\ cadastro\ nota
 comment1.target=Aluno(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date,\ java.lang.Double)
-comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Alunos\r\n
+comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Alunos\r\n\ A\ clase\ aluno\ est\u00E1\ herdando\ os\ atributos\ nome,tel,Data_nasc\ e\ nota\ por\ passagem\ de\ \r\n\ par\u00E2metro.\ A\ palavra\ reservada\ "super"\ recebe\ os\ par\u00E2metros\ que\ foram\ herdados\ da\ \r\n\ super\ classe\ (classe\ pai).\r\n
 comment2.params=nota
 comment2.target=void\ setNota(double)
+comment2.text=\r\n\ M\u00E9todos\ getters\ and\ setters\ (get\ pega\ par\u00E2metro,\ atribui\ para\ o\ atributo\ e\ retorna\ o\r\n\ valor.\ set\ pega\ o\ o\ par\u00E3metro\ atribui\ para\ o\ atributo\ sem\ retorno\ de\ valor(somente\r\n\ ajusta\ o\ valor)).\r\n
 comment3.params=
 comment3.target=java.lang.Double\ getNota()
 numComments=4
