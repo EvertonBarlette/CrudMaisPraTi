@@ -5,7 +5,7 @@ import Controle.*;
 import java.text.*;
 
 /**
- * Escreva uma descrição da classe Tela aqui.
+ * Classe tela mostra na tela todas as informações que o usuário irá visualizar.
  * 
  * @author (Everton jauer Barlette) 
  * @version (05/01/2022)

@@ -4,18 +4,22 @@ import Modelo.*;
 import java.text.*;
 import Visualiza.*;
 /**
- * Escreva uma descrição da classe pessoaControle aqui.
+ * Classe de controle de cadastro de pessoas.
  * 
  * @author (Everton Jauer Barlette) 
  * @version (05/01/2022)
  */
 public class pessoaControle
+/**
+* Criação das variáveis de leitura das informações digitadas pelo usuário e seletor das opções.
+*/
+
 {
     Scanner lerpes = new Scanner(System.in);
     int selpes;
 
     /**
-     * Método que coleta os dados para cadastrar uma pessoa 
+     * Método que coleta os dados para cadastrar um objeto. 
      * 
      * @param String nome da pessoa 
      * @param String telefone da pessoa
@@ -33,7 +37,7 @@ public class pessoaControle
     }
 
     /**
-     * 
+     * Método que mostra todas as informações dos objetos cadastrados ou indica que a lista está vazia caso contrário.
      */
     public void mostraPessoa()
     {
@@ -57,6 +61,9 @@ public class pessoaControle
     }
 
     public void deletaPessoa()
+    /**
+     * Método que deleta objetos através do seu indice (posição) ou indica que a lista está vazia caso contrário.
+     */
     {
         boolean pos = true;
         while(pos)
@@ -96,6 +103,9 @@ public class pessoaControle
         }
 
     public void editaPessoa()
+     /**
+     * Método que edita informações dos objetos através do seu indice (posição) ou indica que a lista está vazia caso contrário.
+     */
     {
         boolean pos = true;
         while(pos)
@@ -184,16 +194,25 @@ public class pessoaControle
         }
     }
 
-    public boolean validaNome(String nome) 
+    public boolean validaNome(String nome)
+    /**
+     * Método que valida informações somente se elas estão de acordo com os padroẽs estipulados no método.  
+     */
     {
         return nome.matches("^[A-Za-záàâãéèêíïóôõöúüçñÁÀÂÃÉÈÍÏÓÔÕÖÚÜÇÑ ]+$");
     }
 
     public boolean validaTelefone(String telefone)
+    /**
+     * Método que valida informações somente se elas estão de acordo com os padroẽs estipulados no método.  
+     */
     {
         return telefone.matches("^[(][1-9]{2}[)][0-9]{5}[-][0-9]{4}|[(][1-9]{2}[)][0-9]{4}[-][0-9]{4}$"); 
     }
     public boolean validaData(String data)
+    /**
+     * Método que valida informações somente se elas estão de acordo com os padroẽs estipulados no método.  
+     */
     {
         return data.matches("^(0[1-9]|[12][0-9]|[3][01])/(0[1-9]|1[012])/\\d{4}$");
     }

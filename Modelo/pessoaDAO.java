@@ -2,17 +2,24 @@ package Modelo;
 import java.util.*;
 
 /**
- * Escreva uma descrição da classe pessoaDAO aqui.
+ * Classe que possui os métodos que instanciam o objeto , criam a sua arraylist e retornam sua lista 
  * @author (Everton Jauer Barlette) 
  * @version (05/01/2022)
  */
 public class pessoaDAO
+/**
+ * Método que usa o padrão singleton (padrão criado para quando se precisa apenas de uma instância).
+ */
 {
     private static pessoaDAO singleton;
-
-    public static pessoaDAO getInstance() 
+    
+    public static  pessoaDAO getInstance()
+    /**
+     * Metodo que instancia o objeto.
+     */
     {
         if(singleton == null) {
+            // Esse if  Caso a classe já tenha sido instanciada o atributo não será nulo, assim retorna-se a única instância já criada.
             singleton = new pessoaDAO();
         } 
         return singleton;
@@ -38,8 +45,7 @@ public class pessoaDAO
     }
 
     /**
-     * Método que retorna a lista com as pessoas 
-     * @param  obj objeto Pessoa   
+     * Método que retorna a lista com as pessoas    
      * @return List<Pessoa> 
      */
     public List<Pessoa> listarPessoa()

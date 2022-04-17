@@ -1,12 +1,11 @@
 #BlueJ class context
 comment0.target=alunoControle
-comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ pessoaControle\ aqui.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
+comment0.text=\r\n\ Classe\ de\ controle\ de\ cadastro\ de\ alunos.\r\n\ \r\n\ @author\ (Everton\ Jauer\ Barlette)\ \r\n\ @version\ (05/01/2022)\r\n
 comment1.params=nom\ tel\ Ddn\ cdt\ not
 comment1.target=boolean\ criaAluno(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date,\ java.lang.Double)
-comment1.text=\r\n\ M\u00E9todo\ que\ coleta\ os\ dados\ para\ cadastrar\ uma\ pessoa\ \r\n\ \r\n\ @param\ String\ nome\ da\ pessoa\ \r\n\ @param\ String\ telefone\ da\ pessoa\r\n\ @param\ Date\ Data\ de\ nascimento\ da\ pessoa\r\n\ @param\ Date\ Data\ do\ cadastro\ da\ pessoa\r\n\ @return\ boolean\ true\ se\ gravou\ ou\ false\ se\ deu\ bug\ \r\n
+comment1.text=\r\n\ M\u00E9todo\ que\ coleta\ os\ dados\ para\ cadastrar\ um\ objeto.\ \r\n\ \r\n\ @param\ String\ nome\ do\ aluno\ \r\n\ @param\ String\ telefone\ do\ aluno\r\n\ @param\ Date\ Data\ de\ nascimento\ do\ aluno\r\n\ @param\ Date\ Data\ do\ cadastro\ do\ aluno\r\n\ @return\ boolean\ true\ se\ gravou\ ou\ false\ se\ deu\ bug\ \r\n
 comment2.params=
 comment2.target=void\ mostraAluno()
-comment2.text=\r\n\ \r\n
 comment3.params=
 comment3.target=void\ deletaAluno()
 comment4.params=

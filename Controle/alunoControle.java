@@ -4,22 +4,25 @@ import Modelo.*;
 import java.text.*;
 import Visualiza.*;
 /**
- * Escreva uma descrição da classe pessoaControle aqui.
+ * Classe de controle de cadastro de alunos.
  * 
  * @author (Everton Jauer Barlette) 
  * @version (05/01/2022)
  */
 public class alunoControle
+/**
+ * Criação das variáveis de leitura das informações digitadas pelo usuário e seletor das opções.
+ */
 {
     Scanner leralu = new Scanner(System.in);
     int selalu;
     /**
-     * Método que coleta os dados para cadastrar uma pessoa 
+     * Método que coleta os dados para cadastrar um objeto. 
      * 
-     * @param String nome da pessoa 
-     * @param String telefone da pessoa
-     * @param Date Data de nascimento da pessoa
-     * @param Date Data do cadastro da pessoa
+     * @param String nome do aluno 
+     * @param String telefone do aluno
+     * @param Date Data de nascimento do aluno
+     * @param Date Data do cadastro do aluno
      * @return boolean true se gravou ou false se deu bug 
      */
     public boolean criaAluno(String nom,String tel,Date Ddn,Date cdt,Double not)
@@ -31,10 +34,10 @@ public class alunoControle
         return true;
     }
 
-    /**
-     * 
-     */
     public void mostraAluno()
+    /**
+     * Método que mostra todas as informações dos objetos cadastrados ou indica que a lista está vazia caso contrário.
+     */
     {
         int ia=1;   
         List<Aluno> lstalu = alunoDAO.getInstance().listarAluno();
@@ -58,6 +61,9 @@ public class alunoControle
     }
 
     public void deletaAluno()
+     /**
+     * Método que deleta objetos através do seu indice (posição) ou indica que a lista está vazia caso contrário.
+     */
     {
         boolean pos = true;
         while(pos)
@@ -97,6 +103,9 @@ public class alunoControle
     }
 
     public void editaAluno()
+    /**
+     * Método que edita informações dos objetos através do seu indice (posição) ou indica que a lista está vazia caso contrário.
+     */
     {
         boolean pos = true;
         while(pos)
