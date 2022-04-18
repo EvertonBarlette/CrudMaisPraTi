@@ -152,7 +152,6 @@ public class Tela
                 }
                 if(opt==1)
                 {
-                    sc.nextInt();
                     pctl.editaPessoa();
                 }
                 else if(opt==2)

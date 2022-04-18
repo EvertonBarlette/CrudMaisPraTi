@@ -135,13 +135,13 @@ public class alunoControle
              catch(IndexOutOfBoundsException e)
             {
                 System.out.println("Insira um número de posição Existente");
-                selalu = 5;
+                selalu = 6;
             }
             catch(InputMismatchException e)
             {
                 leralu.nextLine();
                 System.out.println("caracter invalido.Insira um número de posição Existente");
-                selalu = 5;
+                selalu = 6;
             }
             while(selalu != 6)
             {
@@ -185,11 +185,19 @@ public class alunoControle
                         {
                             System.out.println(e.getMessage());
                         }
+                        break;
                     case 5:
-                        System.out.print("Informe a nova nota do aluno: ");
-                        String newnott = leralu.next();
-                        double newnot = Double.parseDouble(newnott);
-                        lstalu.get(ie).setNota(newnot);
+                        try
+                        {
+                         System.out.print("Informe a nova nota do aluno: ");
+                         String newnott = leralu.next();
+                         double newnot = Double.parseDouble(newnott);
+                         lstalu.get(ie).setNota(newnot);
+                        }
+                          catch(Exception e)
+                        {
+                            System.out.println(e.getMessage());
+                        }
                         break;
                     default:
                 }
